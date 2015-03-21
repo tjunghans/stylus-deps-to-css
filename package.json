@@ -1,0 +1,34 @@
+{
+  "name": "stylus-deps-to-css",
+  "description": "Prepares css and js for express server",
+  "author": "Thomas Junghans <thomas.junghans@gmail.com>",
+  "version": "2.0.0",
+  "main": "./lib/sk-http-browserify",
+  "dependencies": {
+    "stylus": "^0.50"
+  },
+  "devDependencies": {
+    "mocha": "^2.2"
+  },
+  "scripts": {
+    "start": "mocha --watch -R spec",
+    "test": "mocha -R spec"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository" : {
+    "type": "git",
+    "url": "http://git.webvantage.ch/skills/sk-http-browserify"
+  },
+  "keywords": [
+    "stylus",
+    "css",
+    "browserify"
+  ],
+  "licences": {
+    "type": "MIT"
+  }
+}

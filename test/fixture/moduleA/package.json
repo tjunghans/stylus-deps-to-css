@@ -1,0 +1,9 @@
+{
+  "stylus" : "./css/main.styl",
+  "css" : [],
+  "dependencies": {
+    "moduleB": "^1.0",
+    "moduleC": "^1.0",
+    "moduleE": "^1.0"
+  }
+}
