@@ -1,9 +1,9 @@
 {
   "name": "stylus-deps-to-css",
-  "description": "Prepares css and js for express server",
+  "description": "Converts declared stylus dependencies to css",
   "author": "Thomas Junghans <thomas.junghans@gmail.com>",
-  "version": "2.0.0",
-  "main": "./lib/sk-http-browserify",
+  "version": "0.0.0",
+  "main": "./lib/stylus-deps-to-css",
   "dependencies": {
     "stylus": "^0.50"
   },
@@ -21,12 +21,15 @@
   ],
   "repository" : {
     "type": "git",
-    "url": "http://git.webvantage.ch/skills/sk-http-browserify"
+    "url": "https://github.com/tjunghans/stylus-deps-to-css"
+  },
+  "bugs": {
+    "url": "https://github.com/tjunghans/stylus-deps-to-css/issues"
   },
   "keywords": [
     "stylus",
     "css",
-    "browserify"
+    "dependencies"
   ],
   "licences": {
     "type": "MIT"

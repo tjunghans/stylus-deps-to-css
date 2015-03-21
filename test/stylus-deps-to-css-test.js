@@ -2,32 +2,36 @@
 /*globals describe, it, beforeEach */
 
 var assert = require('assert');
-var skHttpBrowserify = require('../lib/sk-http-browserify');
+var stylusDepsToCss = require('../lib/stylus-deps-to-css');
 
 function count(needle, haystack) {
   var re = new RegExp(needle, 'g');
   return (haystack.match(re) || []).length;
 }
 
-describe('http-browserify', function(){
-  var hb;
+function assertAppearances(needle, haystack, expectedAppearances) {
+  assert.equal(count(needle, haystack), expectedAppearances);
+}
+
+describe('stylus-deps-to-css', function(){
+  var deps;
   var rootDir;
 
   beforeEach(function () {
     rootDir = __dirname + '/fixture/moduleA';
-    hb = skHttpBrowserify.create();
+    deps = stylusDepsToCss.create();
   });
 
   it('converts stylus to css', function(done){
-    hb.covertStylusToCss(rootDir, function (css) {
-      assert.equal(count('.module-a', css), 1);
-      assert.equal(count('.module-b', css), 1);
-      assert.equal(count('.module-c', css), 1);
-      assert.equal(count('.module-d', css), 1);
-      assert.equal(count('.module-f', css), 1);
-      assert.equal(count('.module-g', css), 1);
-      assert.equal(count('.module-e', css), 0);
-      assert(css.indexOf('color: #f00') > -1);
+    deps.convertStylusToCss(rootDir, function (css) {
+      assertAppearances('.module-a', css, 1);
+      assertAppearances('.module-b', css, 1);
+      assertAppearances('.module-c', css, 1);
+      assertAppearances('.module-d', css, 1);
+      assertAppearances('.module-f', css, 1);
+      assertAppearances('.module-g', css, 1);
+      assertAppearances('.module-e', css, 0);
+      assertAppearances('color: #f00', css, 1);
       done();
     });
   });
