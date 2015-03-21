@@ -1,5 +1,8 @@
 # stylus-deps-to-css
 
+[![SemVer]](http://semver.org)
+[![License]](https://github.com/tjunghans/stylus-deps-to-css/blob/master/LICENCE)
+
 Searches for stylus dependencies starting from a given root module. The stylus dependencies are declared in the package.json using the custom 'stylus' key.
 
 
@@ -31,3 +34,11 @@ deps.convertStylusToCss(rootDir, function (css) {
 
 - `create`: returns an object with the helper method(s):
   - `convertStylusToCss(modulePath, callback)`: walks the dependencies starting from `modulePath` and looks for the `stylus` key in the package.json. The `stylus` key should contain the path to the stylus file in the current module. Dependency modules under `dependencies` are checked recursively for `stylus` keys in the package.json.
+
+
+## License
+
+MIT
+
+[SemVer]: http://img.shields.io/:semver-%E2%9C%93-brightgreen.svg
+[License]: http://img.shields.io/npm/l/mochify.svg
