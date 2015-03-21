@@ -2,7 +2,7 @@
   "name": "stylus-deps-to-css",
   "description": "Converts declared stylus dependencies to css",
   "author": "Thomas Junghans <thomas.junghans@gmail.com>",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "./lib/stylus-deps-to-css",
   "dependencies": {
     "stylus": "^0.50"
@@ -19,7 +19,7 @@
     "README.md",
     "LICENSE"
   ],
-  "repository" : {
+  "repository": {
     "type": "git",
     "url": "https://github.com/tjunghans/stylus-deps-to-css"
   },
